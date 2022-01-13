@@ -18,3 +18,4 @@ let w = 3;
 let h = 8;
 let perimeter = Perimeter(w, h);
 console.log(perimeter);
+
