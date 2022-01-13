@@ -30,6 +30,7 @@ while(i <= 56) {
     i++;
 }
 //Задача 6
+document.write('Таблица умножения<br>');
 for(i = 2; i <= 10; i++) {
     for(j = 2; j <= 10; j++) {
         document.write(`${i}*${j} = ${i*j} <br>`);
@@ -47,31 +48,40 @@ do {
 
 
 //Задача 8
-// let a, sum8 = 0;
-// i = 0;
-// while(a != '0' || a != '') {
-//     a = +prompt('Введите число');
-//     if(isNaN(a)) {alert('Ошибка ввода'); continue;}
-//     i++; 
-//     sum8 = +sum8 + a;
-// }
-// console.log('Сумма чисел: ' + sum8);
-// console.log('Среднее арифметическое: ' + sum8 / i);
+let a, sum8 = 0;
+i = 0;
+while(a != '0' || a != '') {
+    a = +prompt('Введите число');
+    if(isNaN(a)) {alert('Ошибка ввода'); continue;}
+    i++; 
+    sum8 = +sum8 + a;
+}
+console.log('Сумма чисел: ' + sum8);
+console.log('Среднее арифметическое: ' + sum8 / i);
 
 
 //Задача 9
 let str = '4 98 4 6 1 32 4 65 4 3 5 7 89 7 10 1 36 8 57', min, max, arr;
 arr = str.split(' ');
 max = arr[0];
-for(i = 0; i <= arr.length; i++) {
+for(i = 0; i < arr.length; i++) {
     if(arr[i] > max) {max = arr[i];}
 }
-console.log(max);
+console.log('Максимальное число: ' + max);
 min = arr[0];
-for(i = 0; i <= arr.length; i++) {
+for(i = 0; i < arr.length; i++) {
     if(arr[i] < min) {min = arr[i];}
 }
-console.log(min);
+console.log('Минимальное число: ' + min);
 //Задача 10
 
-
+let n_ = 3456789876,
+nStr = String(n_), amount = 0;
+for(i = 0; i < nStr.length; i++) {
+    document.write(`${nStr[i]}<br>`);
+    amount = amount + +nStr[i];
+}
+document.write('Сумма цифр: ' + amount + `<br>`);
+let nArr = Array.from(nStr);
+nArr.reverse();
+document.write('Обратный порядок: ' + nArr);

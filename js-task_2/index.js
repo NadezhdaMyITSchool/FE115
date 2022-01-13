@@ -29,7 +29,7 @@ let a4 = 1;
 let a = 10, b = 2;
 console.log('Сумма: ' + (a + b) + ', разность: ' + (a - b) + ', произведение: ' + (a * b) + ', частное: ' + (a / b));
 if((a + b) > 1) {
-    console.log(Math.pow((a + b),2));
+    console.log('Сумма в квадрате: '+ Math.pow((a + b),2));
 }
 
 //Задача 6
