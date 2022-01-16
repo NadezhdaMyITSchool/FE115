@@ -25,8 +25,7 @@ for (let i = 23; i <= 57; i++){
     console.log(sum)
 }
 
-
-
+/* ЧЕРЕЗ WHILE*/
 
 //Задание 4
 /* Дан массив числами (строчного типа), например: [‘10’, ‘20’, ‘30’, ‘50’, ‘235’, ‘3000’].
@@ -45,23 +44,53 @@ for (let i = 0; i < arr.length; i++) {
     
 }*/
 //Задание 5
- let arr =['ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ', 'ВС'];
- for (let i = 0; i<= arr.lenrgth; i++);{
-    document.write(arr);
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
 
-    if (arr [i] == 'СБ' || arr [i] == 'ВС'); {
-        document.write(arr[i]);
+for (let i = 0; i < week.length; i++) {
+
+    let dayOff = document.createElement('div');
+    dayOff.innerHTML = week[i];
+
+    if (week[i] == 'Понедельник') {
+        document.write(week[i].italics());
     }
- }
+    if (week[i] == 'Суббота' || week[i] == 'Воскресенье') {
+        document.write(week[i].bold());
+    }
 
+    document.body.appendChild(dayOff);
+}
 //Задание 6
+/*Создайте массив с произвольными данными. Добавьте в конец массива любой элемент,
+и получите последний элемент массива, используя свойство length.*/
+
+let fruits = ['Апельсин', 'Яблоко', 'Слива', 'Груша'];
+  fruits.push('Мандарин');
+  console.log(fruits);
+
+  for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[fruits.length -1]);
+  }
+
+
 
 
 //Задание 7
 
 //Задание 8
+/*Переверните массив [12, false, ‘Текст’, 4, 2, -5, 0] (выведите в обратном порядке),
+используя цикл while и метод reverse.*/
 
+let rev = [12, false, 'Текст', 4, 2, -5, 0];
+rev.reverse();
+console.log(rev);
+/*  Как делать через WHILE*!!!!!*/
 
+let i = 0;
+while (i < 1) { 
+  console.log( rev );
+  i++;
+}
 //Задание 9
 
 
