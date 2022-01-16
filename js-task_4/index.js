@@ -52,15 +52,47 @@ for(i = 0; i < 7; i++) {
 }
 
 //Задание 6
-
+let words = ['земля', 'небо', 'огонь', 'вода'];
+words.push('ветер');
+console.log(words[words.length - 1]);
 
 //Задание 7
+let numbers, numbersArr = [];
+while(numbers != '') {
+numbers = +prompt('Введите число: ');
+numbersArr.push(numbers);
+}
+console.log(numbersArr);
+numbersArr.sort();
+console.log(numbersArr);
 
 //Задание 8
+let difArr = [12, false, 'Текст', 4, 2, -5, 0];
+difArr.reverse();
+console.log(difArr);
 
+difArr = [12, false, 'Текст', 4, 2, -5, 0];
+let m = 0, n = difArr.length - 1;
+while(m < n) {
+    let temp = difArr[m];
+    difArr[m] = difArr[n];
+    difArr[n] = temp;
+    m++;
+    n--;
+}
+console.log(difArr);
 
 //Задание 9
-
+let wholeArr = [5, 9, 21, , , 9, 78, , , , 6],
+    undef = 0;
+for(i = 0; i < wholeArr.length; i++) {
+    if(wholeArr[i] == undefined) {
+    undef++;
+    }
+}
+console.log(undef);
 
 //Задание 10
+
+
 //Задание 11
