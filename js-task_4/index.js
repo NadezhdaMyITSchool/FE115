@@ -93,6 +93,22 @@ for(i = 0; i < wholeArr.length; i++) {
 console.log(undef);
 
 //Задание 10
-
+let tenArr = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2], 
+    sumEl = 0;
+let zeroFirst = tenArr.indexOf(0);
+if(zeroFirst == -1) {
+    //почему выводит 0 в любом случае?
+    console.log(0);
+}
+else {
+for(i = zeroFirst; i < tenArr.length; i++) {
+if(tenArr[i] != 0) {
+    sumEl = sumEl + +tenArr[i];
+}
+else {
+    console.log(sumEl);
+}
+}
+}
 
 //Задание 11
