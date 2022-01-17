@@ -112,3 +112,17 @@ else {
 }
 
 //Задание 11
+let str = [],
+    space = ' ',
+    arrow = '^',
+    height = +prompt('Введите высоту треугольника');
+for(i = 0; i < height; i++) {
+    str.push(space);
+}
+str.push(arrow);
+document.write(`<br>` + str + `<br>`);
+for(i = 0; i < height; i++) {
+    str.shift(space);
+    str.push(arrow + arrow);
+    document.write(str + `<br>`);
+}
