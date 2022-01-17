@@ -27,6 +27,7 @@ function bonusTime(salary, bonus) {
  }
  alert(bonusTime(22.5));*/
 
+
 function getGrade (s1, s2, s3) {
     
 }

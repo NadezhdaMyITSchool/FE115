@@ -34,3 +34,4 @@ if (b >= 6) {
 } else {
     console.log("Не верно!");
 }
+
