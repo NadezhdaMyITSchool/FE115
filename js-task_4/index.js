@@ -121,7 +121,7 @@ for(i = 0; i < height; i++) {
 }
 str.push(arrow);
 document.write(`<br>` + str + `<br>`);
-for(i = 0; i < height; i++) {
+for(i = 0; i < height - 1; i++) {
     str.shift(space);
     str.push(arrow + arrow);
     document.write(str + `<br>`);
