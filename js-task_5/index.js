@@ -12,6 +12,38 @@ console.log(arr2);
 
 //3. Дан массив с числами Узнайте сколько элементов с начала массива надо сложить, чтобы в сумме получилось больше 10-ти. Решить через Reduce и forEach
 
+let arr3 = [1, 9, 2, 2, 3, 1, 2, 8];
+let num3 = 1;
+let result3 = arr3.reduce(function(sum, item) {
+    if (sum > 10) {
+        console.log(num3);
+        return;
+    } else {
+        num3 ++;
+        return sum + item;
+    }
+});
+
+let arr3_3 = [5, 6, 3, 8];
+let count=0, sum=0, flag = false;
+arr3_3.forEach( item  => { 
+    sum = sum + item;
+    if (flag == false) count++ ;
+    if (sum > 10) flag = true;
+})
+
+console.log('чтобы в сумме получилось больше 10ти, нужно сложить ' + count + ' чисел');
+
+// 4. Дан массив с именами ["rachel", "joe", "ben", "ross", "marcel"]. Сделать каждую первую букву заглавной, используя методы перебора массива
+
+let arr4 = ["rachel", "joe", "ben", "ross", "marcel"];
+let friends = arr4.map(word => {
+    let newWord = word[0].toUpperCase() + word.slice(1);
+    return newWord;
+  });
+
+  console.log(friends);
+
 
 //5. Дан массив с числами. Создайте новый массив, состоящий из квадратов этих чисел. 
 
@@ -29,6 +61,29 @@ function createArray(elem){return elem < 0};
 let newArr6 = arr6.filter(createArray);
 console.log(newArr6); 
 
+//7. Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов.
+
+let arr7 = ['word', 'wordword', 'wordwordword', 'word'];
+function calcLength(item) {
+    return item.length > 5;
+}
+
+let newArr7 = arr7.filter(calcLength);
+console.log(newArr7);
+
+// 8. Напишите код, который определяет сумму и произведение значений массива
+
+let arr8 = [1, 2, 3, 4, 5];
+let sum8 = arr8.reduce(function(itemLeft, itemRight) {
+    return itemLeft + itemRight;
+})
+
+let multiply8 = arr8.reduce(function(itemLeft, itemRight) {
+    return itemLeft * itemRight;
+})
+
+console.log('Сумма значений массива : ' + sum8 + ' Произведение значений массива : ' + multiply8);
+
 //9. Дан массив с числами. Оставьте в нем только положительные числа. Затем извлеките квадратный корень из этих чисел
 
 
@@ -40,6 +95,14 @@ let result9 = newArr9.map(function(elem) {
 	return Math.sqrt(elem);
 });
 console.log(result9); 
+
+// 10. Дан массив с числами. Найдите сумму этих чисел через reduce
+
+let arr10 = [5, 6, 8, 255, 6];
+let result10 = arr10.reduce(function(sum, item) {
+    return sum + item;
+});
+console.log(result10);
 
 
 //12. Написать функцию, которой передаем, имя, фамилия и возраст, и она возвращает строку "Привет, Иван Петров с возрастом 17 лет" 
@@ -88,3 +151,18 @@ console.log(resultMax);
 
 //16. Написать функцию, которой передаем имя, и она возраващает приветствие в зависимости от времени суток (Доброе утро\день\вечер\ночи Иван). Через new Date()
 
+let hour = (new Date()).getHours();
+
+function hello(name) {
+    if (hour > 23 || hour < 7) {
+         console.log('Доброй ночи, ' + name);
+    } else if (hour > 6 && hour < 12) {
+         console.log('Доброе утро, ' + name);
+    } else if (hour > 11 && hour < 19) {
+        console.log('Добрый день, ' + name);
+    } else {
+        console.log('Добрый вечер, ' + name);
+    }
+}
+
+hello('Иван');
