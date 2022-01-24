@@ -29,7 +29,9 @@ console.log(arr2_1);
 
 console.log('            ЗАДАЧА 3');
 
-/*let sum = 0;
+                            /*Вариант 1. через цикл и PUSH 
+
+let sum = 0;
 let arr3 = [1,2,3,4,5,6,7,8,9,9,10];
 let arr3_2 = [];
 
@@ -40,7 +42,10 @@ for (let i = 0; i <= arr.length; i++ ) {
     }
 }
 
-console.log(arr3_2);*/
+let result = arr3_2.length + 1;
+console.log(result);*/
+
+                            /*Вариант 2. через forEach
 
 let arr3 = [1,4,2,7,9,12,11];
 let arr3_2 = [];
@@ -51,8 +56,29 @@ arr3.forEach(function(item) {
 	arr3_2.push(item + item < 10);              //??? можно ли через forEach сделать так, чтобы добавляло элемент, а не true false ???
 });
 
-console.log(' массив новый (сумма меньше десяти)  ' + arr3_2);
+let num = 1;
+for (let i = 0; i <= arr3_2.length; i++ ) {
+    if(arr3_2[i] == true) {
+        num = num + 1;
+    } else continue
+}
 
+console.log(' количество чисел из массива, сумма которых больше 10 =  ' + num );*/
+
+
+                                //Вариант 3. через REDUCE
+
+/*let arr3 = [1,4,2,7,9,12,11];
+let num = 1;
+let result = arr3.reduce(function(sum, item) {
+	if (sum > 10) {
+		console.log(num);
+		return;
+	} else {
+		num++;
+		return sum + item;
+	}
+});*/
 
 
 
