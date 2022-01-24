@@ -48,7 +48,7 @@ let arr3_2 = [];
 console.log('Исходный массив  ' + arr3);
 
 arr3.forEach(function(item) {
-	arr3_2.push(item + item < 10);
+	arr3_2.push(item + item < 10);              //??? можно ли через forEach сделать так, чтобы добавляло элемент, а не true false ???
 });
 
 console.log(' массив новый (сумма меньше десяти)  ' + arr3_2);
@@ -87,6 +87,25 @@ let arr6_2 = arr6.filter(item => item < 0)
 console.log(arr6_2);
 
 //Задание 7. Дан массив со строками. Оставьте в нем только те строки, длина которых больше 5-ти символов.
+
+console.log('            ЗАДАЧА 7');
+
+let arr7 = ['Однажды', 'в','студеную', 'зимнюю', 'пору', 'Я', 'из', 'лесу', 'вышел','был'];
+
+function FilterArr7(item){return item.length < 5};
+let arr7_2 = arr7.filter(FilterArr7);
+console.log(arr7_2);
+
+
+
+/*let arr7_2 = [];
+
+arr7.forEach(function(item) {
+	arr7_2.push(item.length > 5);                       ??? можно ли через forEach сделать так, чтобы добавляло элемент, а не true false ???
+});
+
+console.log(arr7_2)*/
+
 
 //Задание 8. Напишите код, который определяет сумму и произведение значений массива
 
