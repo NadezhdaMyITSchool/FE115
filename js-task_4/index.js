@@ -42,7 +42,7 @@ for(i = 0; i < arr4.length; i++) {
 //Задание 5
 arr5 = ['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС'];
 for(i = 0; i < 7; i++) {
-    if(i == 5 || i == 6) {
+    if(arr5[i] == 'СБ' || arr5[i] == 'ВС') {
         document.write(`<b>` + arr5[i] + `</b>` + ` `)
     }
     else {
@@ -96,33 +96,29 @@ console.log(undef);
 let tenArr = [48,9,0,4,21,2,1,0,8,84,76,8,4,13,2], 
     sumEl = 0;
 let zeroFirst = tenArr.indexOf(0);
-if(zeroFirst == -1) {
-    //почему выводит 0 в любом случае?
-    console.log(0);
+let zeroLast = tenArr.lastIndexOf(0);
+if(zeroFirst == -1 || zeroLast == -1 || zeroFirst == zeroLast) {
+    console.log('Значение - 0');
 }
 else {
-for(i = zeroFirst; i < tenArr.length; i++) {
-if(tenArr[i] != 0) {
+for(i = zeroFirst; i < zeroLast; i++) {
     sumEl = sumEl + +tenArr[i];
 }
-else {
-    console.log(sumEl);
-}
-}
+console.log('Сумма чисел между 0 и 0 - ' + sumEl);
 }
 
 //Задание 11
 let str = [],
-    space = ' ',
+    space = '&nbsp;',
     arrow = '^',
     height = +prompt('Введите высоту треугольника');
 for(i = 0; i < height; i++) {
     str.push(space);
 }
 str.push(arrow);
-document.write(`<br>` + str + `<br>`);
+document.write(`<br>` + str.join('') + `<br>`);
 for(i = 0; i < height - 1; i++) {
     str.shift(space);
-    str.push(arrow + arrow);
-    document.write(str + `<br>`);
+    str.push(space + arrow);
+    document.write(str.join('') + `<br>`);
 }
