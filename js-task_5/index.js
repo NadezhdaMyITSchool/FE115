@@ -24,6 +24,7 @@ array.forEach(
     }
 )
 console.log(count);
+
 //Вариант 2
 let array2 = [1, 2, 3, 0, 4, 5, 6];
 let num2 = 1;
@@ -36,6 +37,7 @@ let result2 = array2.reduce(function(sum, elem) {
 		return sum + elem;
 	}
 }); 
+
 // 4. Дан массив с именами ["rachel", "joe", "ben", "ross", "marcel"]. Сделать каждую первую букву заглавной, используя методы перебора массива
 let names = ["rachel", "joe", "ben", "ross", "marcel"];
 let namesUp = names.map(function(name) {
@@ -108,14 +110,18 @@ console.log(seasons.includes('summer')); //возвращает true, т.к. э�
 let arrExample = [1, 2, 3, 4, 5];
 console.log(arrExample.flatMap(x => [x * 2])); //метод преобразует массив через map и поднимает на 1 уровень вложенности с помощью flat
 
-// Методы .every(), .some()
+// Методы .every(), .some() - проверяют все элементы на соответствие заданному условию и выводят true или false
 let arrSomeEvery = [1, -1, 2, -2, 3];
 function isPositive(number) {
   return number > 0;
 }
 console.log(arrSomeEvery.every(isPositive) ); // false, не все положительные
 console.log(arrSomeEvery.some(isPositive) ); // true, есть одно положительное
-// .findIndex()
+
+// .findIndex() 
+let fruities = ["apple", "pear", "banana", "orange", "grapefruit", "mango"];
+let index = fruities.findIndex(fruit => fruit === "orange");
+console.log(index); // выводит индекс элемента "orange" - 3
 
 // 12. Написать функцию, которой передаем, имя, фамилия и возраст, и она возвращает строку "Привет, Иван Петров с возрастом 17 лет"
 function hello(name, surname, age) {
@@ -157,5 +163,19 @@ function max(a,b) {
 console.log(max(4,8));
 
 // 16. Написать функцию, которой передаем имя, и она возраващает приветствие в зависимости от времени суток (Доброе утро\день\вечер\ночи Иван). Через new Date()
-
-
+let welcome;
+function sayHello(n) {
+  let currentDate = new Date();
+  let hour = currentDate.getHours();
+  if (hour < 12 && hour > 5) {
+    return welcome = "Доброе утро, " + n;
+} else if (hour < 18) {
+    return welcome = "Добрый день, " + n;
+} else if (hour < 24) {
+    return welcome = "Добрый вечер, " + n;
+} else {
+    return welcome = "Доброй ночи, " + n;
+}
+}
+sayHello(prompt('Как вас зовут?'));
+alert(welcome);
