@@ -90,6 +90,7 @@ console.log(num);
 //push - Метод добавления нового элемента в конец массива
 
 num.push('Привет');
+
 console.log(num);
 console.log(num[num.length-1]);
 
@@ -125,7 +126,7 @@ arr4.reverse();
 console.log(arr4);
 
 
-/// как с помощью while вывести обратный массив
+/// как с помощью while вывести обратный массив//у елены глинской
 let b = arr4.length - 1; 
 while (b>=0) {
     console.log(arr4[b]);
@@ -135,7 +136,7 @@ while (b>=0) {
 
 
 
-//Задание 9
+//Задание 9  //37 минута
 let arr8 = [5, 9, 21, , , 9, 78, , , , 6];
 console.log(arr8);
 console.log(arr8.length);
