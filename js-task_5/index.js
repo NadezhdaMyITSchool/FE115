@@ -158,14 +158,14 @@ alert(arr.findIndex(isOdd));*/
 
 
 
-function getName() {
+/*function getName() {
     let name = prompt('Как вас зовут?')
     let firstName = prompt('Твоя фамилия?')
      let age = prompt( 'Сколько тебе лет?')
    alert("Привет, " + name + firstName + " c возрастом " + age + " лет ")
 
 }
-getName()
+getName()*/
 
 /*13.Сделайте функцию, которая отнимает от первого числа второе и делит на
 третье. Числа передаются параметром.*/
@@ -173,7 +173,6 @@ getName()
 function sum(a, b, c) {
     return (a - b) / c;
 }
-
 let d = sum(20, 15 , 10);
 console.log(d)
 
@@ -181,10 +180,32 @@ console.log(d)
 function cube(a, b, c) {
 	return a * b * c
 }
-
 let f = cube (40, 10 , 20);
 console.log(f)
 
 cube()
 //15. Напишите функции min и max, которые возвращают меньшее и большее из чисел a и b.
 //16. Написать функцию, которой передаем имя, и она возраващает приветствие в зависимости от времени суток (Доброе утро\день\вечер\ночи Иван). Через new Date()
+ 
+ 
+    let name1 = 'Надежда';
+    let date = new Date();
+    let hour = date.getHours();
+     function day (name, time) {
+    if (time >= 9 && time <12) {
+        alert("Доброе утро " + name);
+
+    } else if (time >= 12 && time < 18) {
+        alert("Добрый день " + name);
+        
+    } else if (time >= 18 && time <22) {
+       alert("Добрый вечер " + name);
+        
+    } else if (time >= 22 && time < 24); {
+   alert("Доброй ночи " + name)
+    } 
+
+    }
+    day(name1)
+    console.log (date);
+
