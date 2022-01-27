@@ -53,6 +53,8 @@ let result1 = arr3.reduce((sum, item) => {
         return sum + item;
     }
 });
+сonsole.log(kol, result1);
+
 
 let count=0, sum=0, flag = false;
 arr3.forEach( item  => { 
