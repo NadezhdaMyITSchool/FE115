@@ -31,7 +31,7 @@ let num2 = 1;
 let result2 = array2.reduce(function(sum, elem) {
 	if (sum > 10) {
 		console.log(num2);
-		return;
+		return num2;
 	} else {
 		num2++;
 		return sum + elem;
