@@ -198,14 +198,3 @@ document.write() для вывода в «тело» HTML-документа.*/
 
 console.log('                       Задача 11');
 
-// let arr11One = [10,2,6,7,,13,14,10,6,2,7,8,9,10,14];
-// let arr11Two = [7,9,9,7,8,9,6,5,9,8,7,6,5,4];
-
-
-// function findRepeat(arr) {
-//     for(i = 0; i < arr.length; i++){
-//         console.log(arr.match(/arr[i]/).index);
-//     } 
-// }
-
-// console.log(findRepeat(arr11One));
