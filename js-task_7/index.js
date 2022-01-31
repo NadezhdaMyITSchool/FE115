@@ -1,9 +1,8 @@
 
 
-//не решены  - 8,11; не работает - 9,10;
+//не решены  - 8,11; не работает - 9;
 // 8 - проверка телефона
 // 9 - проверка email
-// 10 - составление слова
 // 11 - массивы
 
 //Задание 1. Дана строка 'aaa@bbb@ccc'. Замените все @ на ! с помощью глобального поиска и замены.
@@ -158,29 +157,24 @@ console.log(regexp.test(email));
 console.log('                       Задача 10');
 
 
-// let arr10 = [
-//     ['m', 'y', 'e'], 
-//     ['x', 'a', 'm'], 
-//     ['p', 'l', 'e']
-// ];
+let arr10 = [
+    ['m', 'y', 'e'], 
+    ['x', 'a', 'm'], 
+    ['p', 'l', 'e']
+];
 
-// function findWord(arr10,arrMap) {
-//     let NewWord = [];
-//     for (i = 0; i < arrMap.length; i++) {
-//         NewWord.push(arr10[arrMap[i]]);
-//     }
-//     return NewWord;
-// }
+arr10 = arr10.flat(Infinity);
 
-// console.log(findWord(arr10,[1, 3, 5, 8]));
+function findWord(arr10,arrMap) {
+    let NewWord = [];
+    for (i = 0; i < arrMap.length; i++) {
+        NewWord.push(arr10[arrMap[i]- 1]);
+    }
+    return NewWord;
+}
 
+console.log(findWord(arr10,[1, 3, 5, 8]));
 
-
-// // let arrMap = [1, 3, 5, 8];
-
-// let NewArr = arr10.flat(Infinity);
-// let NewWord = [NewArr[0],NewArr[2],NewArr[4],NewArr[7]];
-// console.log(NewWord);
 
 //Задание 11
 
