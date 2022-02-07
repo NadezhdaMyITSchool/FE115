@@ -9,22 +9,25 @@ let Bulb  = function() {
     // this.Time = 0;
     this.getPrice = function() {
             
-            this.get = function(){
+            // this.get();
+
+            // this.get = function(){
                this.pricePerVt = +prompt('Введите цену электроэнергии за кВ/ч');
                this.Time = +prompt('Введите время использования электроэнергии, ч');
        
-               this.operation();
-       };
+            //    this.operation();
+    //    };
 
-       this.operation = function() {
+    //    this.operation = function() {
               this.Price = this.Time * this.pricePerVt * this.power; 
 
-       this.show();
-       };
+    //    this.show();
+    //    };
         
-       this.show = function () {
+    //    this.show = function () {
         alert('Вам нужно заплатить: '  + this.Price);
-       };
+    //    };
+        break;
        
     };
 }
@@ -65,41 +68,41 @@ console.log(svetodiodBulb);
 //Объект 2. Калькулятор
 
 
-let Calc = function() {
-    this.get = function(){
-       this.a = +prompt('Введите число a');
-       this.b = +prompt('Введите число b');
-       this.oper = prompt('Введите операцию:+,-,*,/');
+// let Calc = function() {
+//     this.get = function(){
+//        this.a = +prompt('Введите число a');
+//        this.b = +prompt('Введите число b');
+//        this.oper = prompt('Введите операцию:+,-,*,/');
 
-       this.operation();
-    };
+//        this.operation();
+//     };
 
-    this.operation = function() {
-        switch(this.oper) {
-            case '+': 
-                this.result = this.a + this.b;
-            break;
-            case '-': 
-                this.result = this.a - this.b;
-            break;
-            case '*': 
-                this.result = this.a * this.b;
-            break;
-            case '/': 
-                this.result = this.a / this.b;
-            break;
-            default: this.result = 0;
-        }
-        this.show();
-    };
+//     this.operation = function() {
+//         switch(this.oper) {
+//             case '+': 
+//                 this.result = this.a + this.b;
+//             break;
+//             case '-': 
+//                 this.result = this.a - this.b;
+//             break;
+//             case '*': 
+//                 this.result = this.a * this.b;
+//             break;
+//             case '/': 
+//                 this.result = this.a / this.b;
+//             break;
+//             default: this.result = 0;
+//         }
+//         this.show();
+//     };
 
-    this.show = function () {
-        alert(this.a + '  ' + this.oper +  '  ' + this.b   + ' = '  + this.result);
-    };
-};
+//     this.show = function () {
+//         alert(this.a + '  ' + this.oper +  '  ' + this.b   + ' = '  + this.result);
+//     };
+// };
 
-let calc = new Calc();
-calc.get();
+// let calc = new Calc();
+// calc.get();
 
 
 
