@@ -37,8 +37,8 @@ console.log(isEven([2, 5, 10,15,17,26, 14,]));
 
 /*4.Напишите ф-цию, которая рисует следующую пирамидку (исп. вложенные
     циклы)*/
-    //let symbol = prompt('символ');
-   /* function arr4(n){
+    let symbol = prompt('символ');
+    function arr4(n){
       for(let i = 1; i <= n; i++){
         let m = '';
         for(let j = 0; j < i; j++){
@@ -47,7 +47,7 @@ console.log(isEven([2, 5, 10,15,17,26, 14,]));
         console.log(m+'\n')
       }
     };
-    arr4(prompt('число'))*/
+    arr4(prompt('число'))
 
     /*5. Дан массив с числами (передается параметром). Выведите последовательно его элементы, используя рекурсию и не используя цикл.*/
     let i = 0;
@@ -68,10 +68,10 @@ console.log(isEven([2, 5, 10,15,17,26, 14,]));
     let res = (num);
     let sum = [];
     for (let i = 0;  i < res.length; i++) {
-     
+      sum += Number(res[i])
      
     }
-    return  sum += Number(res[i]);
+    return sum;
   }
   console.log(getDigitsSum(456));
 /* 7Найдите все года от 1 до 2022, сумма цифр которых равна 13. Для этого используйте вспомогательную функцию getDigitsSum из предыдущей задачи*/
