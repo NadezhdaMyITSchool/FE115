@@ -1,8 +1,8 @@
 // Задача 1
 
 // let a, b;
-// a = prompt('Введите число a:');
-// b = prompt('Введите число b:');
+// a = +prompt('Введите число a:');
+// b = +prompt('Введите число b:');
 // function array (a, b) {
 //     let arr1 = [], i;
 //     for (i=a; i<=b; i++) {
@@ -76,6 +76,14 @@ function getDigitsSum(num) {
  console.log(' Задача 6:  ' + getDigitsSum(num));
 
 // Задача 7
+
+function getDigitsSum(i) {
+  let sum = 0;
+  let str = String(i);
+  for(let j = 0; j < str.length; j++) sum += Number(str[j]);
+  return sum;
+}
+
 
 
 // Задача 8
