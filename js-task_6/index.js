@@ -1,14 +1,37 @@
-
+//lesson 24
 //1. Напишите две функции: первая ф-ция должна возвращать массив с числовыми значениями, диапазон которых должен вводиться пользователем с клавиатуры; вторая – выводить полученный массив.
 let start = +prompt('Введите с какого числа начинается массив');
 let finish = +prompt('Введите каким числом заканчивается массив');
-function getArr(start, finish) {
-    var arr = [];
-    for(var i = start; i <= finish; i++)
+let chekArr = function(start, finish) {
+    if (start == finish) {
+        return 
+    }
+    else {
+        return true
+    }
+}
+
+function makeArr(start, finish) {
+    let max=finish, min=start;
+    let arr = [];
+    if (chekArr) {
+        if (start>finish) {
+            max=start;
+            min=finish;
+        }
+    for(i = min; i <= max; i++)
         arr.push(i);
     return arr;
+} else {
+    return "Введите корректные данные"
 }
-console.log(getArr(start, finish));
+}
+
+
+let printArr = function(result) {
+    console.log(result)
+}
+printArr(makeArr(start, finish))
 
 
 //2. Сделайте функцию isEven() (even - это четный), которая параметром принимает целое число и проверяет: четное оно или нет. Если четное - пусть функция возвращает true, если нечетное — false.
@@ -22,6 +45,7 @@ isEven(a);
 //3. Напишите ф-цию, в которую передается массив с целыми числами. Верните новый массив, где останутся лежать только четные из этих чисел.Для этого используйте вспомогательную функцию isEven из предыдущей задачи.
 let arr31 = [1,2,3,4,5,6,7]
 let arrEven = function(arr) {
+    
     return arr.filter(isEven)
 } 
 console.log(arrEven(arr31));
@@ -31,43 +55,49 @@ console.log(arrEven(arr31));
 
 //4. Напишите ф-цию, которая рисует следующую пирамидку (исп. вложенные циклы):
 
-function createPyr(numb, symb) {
-
-    numb = prompt('Введите количество рядов');
-        for (var i = 1; i <= numb; i++) {
-            for (var j = 1; j <= i; j++) {
-                document.write(i);
+function createPyr(n) {
+    for (let i = 1; i <= n; i++) {
+        let str = '';
+        for (let j = 1; j <= i; j++) {
+            if (symbol == undefined || symbol == false || symbol == ' ') {
+                str+=i;
+            } else {
+                str+= symbol;
             }
-            document.write('<br>');
-        }
-    
-}
+        };
+        console.log(str+'\n')
+    }
+};
 
-createPyr( );
-//
+let symbol = prompt('Можно ввести любой символ');
+
+createPyr(prompt('Введите количество рядов'));
+
 
 //Функция может вызывать саму себя. Три способа такого вызова:1)по имени функции; 2)arguments.callee; 3) переменной, которая ссылается на функцию
 
 //5. Дан массив с числами (передается параметром). Выведите последовательно его элементы, используя рекурсию и не используя цикл.
 
-let arr = [1,2,3,-34,0]
+let arr = [1,2,3,-34,0,32,98]
 
-function func(i){
-    console.log(arr[i++]);
-    if(i<arr.length){
-        func(i);
+function func(arr){
+    console.log(arr[0]);
+    arr.shift()
+    let i = 0;
+    if(arr.length>0){
+        func(arr);
     }
 }
-func(0);
+func(arr);
 
 
 //6. Сделайте функцию getDigitsSum (digit - это цифра), которая параметром принимает целое число и возвращает сумму его цифр
-let digit = +prompt('введите число');
+let digit = +prompt('введите любое целое число');
 let getDigitsSum = function(num) {
     let sum = 0;
-    let str = String(num);
+    let str = String(num);   // в строку
     for(let i = 0; i < str.length; i++)
-    sum += Number(str[i]);
+    sum += Number(str[i]);   //обратно в число
     return sum;
 }
 console.log(getDigitsSum(digit));
@@ -110,7 +140,18 @@ let makeString = (string, n) => {
   };
 console.log(makeString('мама мыла раму', n));
 
+let str8 ='hellomyworld'
 
+function makeString1(str, n) {
+    let arrNew = str.split("");
+    let strNew = arrNew.map((item, index) => {
+        if (index % n == 0 && index!=0) {
+            return item.toUpperCase()
+        } else {return item}
+    })
+    return strNew.join("")
+}
+console.log(makeString1(str8, 3));
 
 //9. Создайте функцию, которая принимает в качестве параметра целое число и возвращает количество цифр в этом числе
 let number = 4392810;
