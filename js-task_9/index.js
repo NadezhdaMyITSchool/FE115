@@ -196,6 +196,8 @@ divCrBlock2.appendChild(h2_2);
 divCrBlock2.appendChild(pCrBlock2);
 divCrBlock2.appendChild(button2);
 
+//не доделано 
+
 
 
 
