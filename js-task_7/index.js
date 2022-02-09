@@ -92,10 +92,5 @@ console.log(str7.match(reg7));
 //     выражения.
 
 
-function checkEmail(email) {
-    let regexp9 = /[A-za-z0-9]@[a-z].[A-za-z]{2,11}/gi;
-    return regexp9.test(email)
-};
 
-console.log(checkEmail('test@mail.ru'));
 
