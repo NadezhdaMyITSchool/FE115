@@ -13,6 +13,7 @@ let head = () => {
 
   let arrHead = [];
 
+  document.querySelector('html').setAttribute('lang', 'ru');
   metaChar.setAttribute('charset', 'UTF-8');
   metaContent.setAttribute('name', 'viewport');
   metaContent.setAttribute('content', 'width=device-width, initial-scale=1.0');
