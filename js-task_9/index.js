@@ -154,6 +154,7 @@ div4.appendChild(div5);
 
 let div5_el1 = document.createElement('div');
 div5_el1.classList.add('creator_name');
+div5_el1.innerHTML = 'Freelancer';
 
 div5.appendChild(div5_el1);
 
@@ -174,13 +175,15 @@ button.classList.add('button');
 div5.appendChild(button);
 
 let divActive = document.createElement('div');
-divActive.classList.add('creator__block creator__block_active');
+divActive.classList.add('creator__block');
+divActive.classList.add('creator__block_active');
 
 div4.appendChild(divActive);
 
 
 let divName = document.createElement('div');
 divName.classList.add('creator_name');
+divName.innerHTML = 'Studio';
 
 divActive.appendChild(divName);
 
