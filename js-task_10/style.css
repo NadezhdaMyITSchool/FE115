@@ -1,0 +1,114 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;   
+}
+
+body {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    font-weight: normal;
+}
+.todo {
+    max-width: 400px;
+    margin: 0 auto;
+    background: -webkit-linear-gradient(135deg, rgb(249, 246, 119) 25%, rgb(114, 251, 61));
+    background: -moz-linear-gradient(135deg, rgb(249, 246, 119) 25%, rgb(114, 251, 61));
+    background: linear-gradient(135deg, rgb(249, 246, 119) 25%, rgb(114, 251, 61));
+    border-radius: 5px;
+    padding-bottom: 15px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    background: -webkit-linear-gradient(45deg, #37ecba, #72afd3);
+    background: -moz-linear-gradient(45deg, #37ecba, #72afd3);
+    background: linear-gradient(45deg, #37ecba, #72afd3);
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 5px rgb(11, 114, 75);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgb(26, 77, 26);
+    margin-bottom: 15px;
+}
+.todo__add {
+    margin-bottom: 10px;
+    padding: 0px 5px;
+    
+}
+.todo__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-complete.checked,
+.description.checked {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.btn-complete {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+.description {
+    width: 70%;
+}
+.total {
+    text-align: center;
+    color: #5d1a78;
+    margin-bottom: 10px;
+}
+
+.todo__text {
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid green;
+    margin-bottom: 15px;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+}
+
+.todo__text:focus {
+    background: -webkit-linear-gradient(45deg, #37ecba, #72afd3);
+    background: -moz-linear-gradient(45deg, #37ecba, #72afd3);
+    background: linear-gradient(45deg, #37ecba, #72afd3);
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    width: 30%;
+    border-radius: 5px;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: antiquewhite;
+    background: radial-gradient(circle, #5d1a78, #2a1c42);
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+.edit, .save, .delete {
+    width: 24px;
+    height: 28px;
+    line-height: 0.5;
+}
+
+.edit::after {
+    display: block;
+    content: '\f303';
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    font-weight: 900;
+}
