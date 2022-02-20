@@ -5,7 +5,7 @@
 }
 
 body {
-    font-size: 24px;
+    font-size: 22px;
     background-color: rgba(124, 19, 223, 0.452);
 }
 
@@ -30,11 +30,13 @@ button {
     background-color: chartreuse;
 }
 
-.price {
+.price, .info {
     padding: 10px 0px;
     background-color: wheat;
     border-radius: 5px;
     text-align: center;
     width: 300px;
     margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }

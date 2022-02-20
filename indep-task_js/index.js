@@ -153,7 +153,7 @@ function showForm() {
     today.setAttribute('type', 'datetime');
     today.setAttribute('name', 'today');
     let nowToday = new Date();
-    today.value = `${nowToday.getDate()} / ${nowToday.getMonth() + 1} / ${nowToday.getFullYear()}, ${nowToday.getHours()}:${nowToday.getMinutes()}:${nowToday.getSeconds()}`
+    today.value = `${nowToday.getDate()}/${nowToday.getMonth() + 1}/${nowToday.getFullYear()}, ${nowToday.getHours()}:${nowToday.getMinutes()}:${nowToday.getSeconds()}`
     today.required = 'true';
 
     let departure = document.createElement('select');
@@ -245,10 +245,15 @@ function showCalculation(price) {
     if(document.body.lastChild.className != 'price') {
         let priceFinal = document.createElement('div');
         priceFinal.setAttribute('class', 'price');
-        priceFinal.innerHTML = `Стоимость доставки ${price}`;
+        priceFinal.innerHTML = `Стоимость доставки, руб. - ${price}`;
         document.body.append(priceFinal);
+        let delivInfo = document.createElement('div');
+        delivInfo.setAttribute('class', 'info');
+        delivInfo.innerHTML = `<i>Дата расчета</i> - </br>${fieldDateCurrent}.</br><i>Способ доставки</i> - ${delMethods}. </br><i>Путь доставки:</i> ${fieldDistA} (${fieldDateDeparture}) - ${fieldDistB} (${fieldDateDelivery}). </br><b>Информация о заказчике:</b> ${fieldName}, ${fieldPhone}, ${fieldEmail}`;
+        document.body.append(delivInfo);
+
     } else {
-        document.body.lastChild.innerHTML = `Стоимость доставки ${price}`;
+        document.body.lastChild.innerHTML = `Стоимость доставки, руб. - ${price}`;
     }
     
 }
