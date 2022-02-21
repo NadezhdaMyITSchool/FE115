@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 22px;
+    background-color: rgba(124, 19, 223, 0.452);
+}
+
+form {
+    padding: 20px 0px;
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, select {
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: chartreuse;
+}
+
+.price, .info {
+    padding: 10px 0px;
+    background-color: wheat;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
